@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#2f2924" />
-  <meta name="description" content="Atendimento e agendamento com Julianna Araujo." />
-  <title>Julianna Araujo | Atendimento</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2f2924">
+  <meta name="description" content="Atendimento e agendamento com Dra. Julianna Araujo.">
+  <title>Dra. Julianna Araujo | Atendimento</title>
 
   <style>
     :root{
-      --fundo:#f4efe8;
-      --cartao:#fffaf4;
+      --fundo:#f3eee7;
+      --cartao:#fffaf5;
       --marrom:#4a3b31;
+      --marrom-escuro:#2b231f;
       --marrom-claro:#8b7565;
-      --linha:#dbcfc3;
-      --botao:#5c493c;
-      --botao-hover:#46372e;
+      --dourado:#c7a56b;
+      --linha:#ddd0c3;
       --texto:#352c26;
     }
 
@@ -27,68 +27,78 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:24px;
-      background:
-        radial-gradient(circle at top, #fffaf4 0%, var(--fundo) 48%, #e9dfd5 100%);
+      padding:28px 18px;
       color:var(--texto);
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(circle at top, #fffaf4 0%, var(--fundo) 46%, #e9dfd5 100%);
     }
 
     .card{
       width:100%;
       max-width:430px;
-      padding:40px 28px 30px;
+      padding:0 26px 30px;
       text-align:center;
-      background:rgba(255,250,244,.96);
-      border:1px solid rgba(139,117,101,.25);
-      border-radius:28px;
-      box-shadow:0 18px 50px rgba(74,59,49,.14);
-      backdrop-filter:blur(8px);
+      background:rgba(255,250,245,.96);
+      border:1px solid rgba(139,117,101,.22);
+      border-radius:30px;
+      box-shadow:0 22px 58px rgba(74,59,49,.16);
+      overflow:visible;
     }
 
-    .monograma{
-      width:88px;
-      height:88px;
-      margin:0 auto 18px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border:1px solid var(--linha);
+    .foto-wrap{
+      width:164px;
+      height:164px;
+      margin:-58px auto 18px;
+      padding:5px;
       border-radius:50%;
-      color:var(--marrom);
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:34px;
-      letter-spacing:-4px;
-      background:#f8f1e9;
+      background:linear-gradient(145deg,#f4dfb3,#b99155);
+      box-shadow:0 14px 34px rgba(74,59,49,.20);
+    }
+
+    .foto{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      object-position:center 22%;
+      border-radius:50%;
+      border:4px solid var(--cartao);
+    }
+
+    .logo{
+      display:block;
+      width:min(245px,76%);
+      margin:8px auto 8px;
+      mix-blend-mode:multiply;
     }
 
     h1{
-      margin:0;
+      margin:10px 0 0;
+      color:var(--marrom-escuro);
       font-family:Georgia,"Times New Roman",serif;
-      font-size:30px;
+      font-size:29px;
       font-weight:500;
-      color:var(--marrom);
-    }
-
-    .area{
-      margin:9px 0 6px;
-      color:var(--marrom-claro);
-      font-size:15px;
-      letter-spacing:.08em;
-      text-transform:uppercase;
     }
 
     .frase{
-      margin:18px auto 28px;
-      max-width:320px;
+      margin:14px auto 25px;
+      max-width:330px;
+      color:#6c5c51;
       font-size:16px;
       line-height:1.55;
-      color:#66564b;
+    }
+
+    .divisor{
+      width:48px;
+      height:1px;
+      margin:0 auto 24px;
+      background:var(--dourado);
     }
 
     .botao{
       width:100%;
-      min-height:54px;
+      min-height:55px;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -98,28 +108,23 @@
       border-radius:16px;
       text-decoration:none;
       font-size:16px;
-      font-weight:600;
-      transition:.2s ease;
+      font-weight:650;
+      transition:transform .2s ease, background .2s ease;
     }
+
+    .botao:active{transform:scale(.985)}
 
     .principal{
       color:white;
-      background:var(--botao);
+      background:var(--marrom);
       box-shadow:0 10px 24px rgba(74,59,49,.18);
-    }
-
-    .principal:hover{
-      background:var(--botao-hover);
-      transform:translateY(-1px);
     }
 
     .secundario{
       color:var(--marrom);
       border:1px solid var(--linha);
-      background:transparent;
+      background:#fffaf5;
     }
-
-    .secundario:hover{background:#f3ebe3}
 
     .local{
       margin-top:24px;
@@ -127,19 +132,22 @@
       font-size:14px;
     }
 
-    .assinatura{
-      margin-top:24px;
-      padding-top:20px;
-      border-top:1px solid #e6dbd1;
+    .rodape{
+      margin-top:22px;
+      padding-top:19px;
+      border-top:1px solid #e7ddd4;
       color:#9a897c;
       font-size:12px;
-      letter-spacing:.04em;
+      letter-spacing:.05em;
+      text-transform:uppercase;
     }
 
     svg{width:20px;height:20px;flex:none}
 
     @media (max-width:420px){
-      .card{padding:34px 22px 26px}
+      body{padding-top:74px}
+      .card{padding-left:20px;padding-right:20px}
+      .foto-wrap{width:148px;height:148px}
       h1{font-size:27px}
     }
   </style>
@@ -147,21 +155,29 @@
 
 <body>
   <main class="card">
-    <div class="monograma" aria-label="Monograma JA">JA</div>
+    <div class="foto-wrap">
+      <img
+        class="foto"
+        src="9060A61F-3425-4262-87F8-0E586797D13F.png"
+        alt="Dra. Julianna Araujo">
+    </div>
 
-    <h1>Julianna Araujo</h1>
-    <div class="area">Estética &amp; Bem-Estar</div>
+    <img class="logo" src="logo-julianna.png" alt="Dra. Julianna Araujo — Estética Avançada">
+
+    <h1>Dra. Julianna Araujo</h1>
 
     <p class="frase">
-      Resultados naturais, cuidado individualizado e segurança em cada detalhe.
+      Naturalidade, segurança e cuidado em cada detalhe.
     </p>
+
+    <div class="divisor"></div>
 
     <a class="botao principal" href="#" id="whatsappLink">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.44L3.5 20.5l1.56-4.26A8.5 8.5 0 1 1 20.5 11.5Z" stroke="currentColor" stroke-width="1.8"/>
         <path d="M8.2 7.8c.2-.45.4-.46.72-.47h.6c.16 0 .34.03.44.27l.9 2.15c.1.23.05.42-.08.6l-.58.76c-.13.17-.14.32-.04.5.46.88 1.14 1.62 1.98 2.14.18.11.33.09.48-.05l.84-.78c.17-.16.37-.2.58-.11l2.05.98c.23.11.3.28.26.5-.1.64-.47 1.22-1.02 1.57-.47.3-1.1.42-1.67.29-1.34-.3-2.6-.97-3.63-1.9a10.83 10.83 0 0 1-2.35-3.07c-.5-1.02-.53-1.94-.07-2.83Z" fill="currentColor"/>
       </svg>
-      Falar pelo WhatsApp
+      Agendar pelo WhatsApp
     </a>
 
     <a class="botao secundario" href="https://maps.app.goo.gl/Xkc4s6L8U9xiyzMaA?g_st=ic" target="_blank" rel="noopener">
@@ -182,8 +198,7 @@
     </a>
 
     <div class="local">📍 Murici – AL</div>
-
-    <div class="assinatura">Atendimento mediante agendamento</div>
+    <div class="rodape">Atendimento mediante agendamento</div>
   </main>
 
   <script>
