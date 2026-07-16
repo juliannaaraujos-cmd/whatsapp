@@ -102,21 +102,24 @@
       transition:.2s ease;
     }
 
-    .whatsapp{
+    .principal{
       color:white;
       background:var(--botao);
       box-shadow:0 10px 24px rgba(74,59,49,.18);
     }
 
-    .whatsapp:hover{background:var(--botao-hover); transform:translateY(-1px)}
+    .principal:hover{
+      background:var(--botao-hover);
+      transform:translateY(-1px);
+    }
 
-    .instagram{
+    .secundario{
       color:var(--marrom);
       border:1px solid var(--linha);
       background:transparent;
     }
 
-    .instagram:hover{background:#f3ebe3}
+    .secundario:hover{background:#f3ebe3}
 
     .local{
       margin-top:24px;
@@ -153,7 +156,7 @@
       Resultados naturais, cuidado individualizado e segurança em cada detalhe.
     </p>
 
-    <a class="botao whatsapp" href="#" id="whatsappLink" aria-label="Falar pelo WhatsApp">
+    <a class="botao principal" href="#" id="whatsappLink">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.44L3.5 20.5l1.56-4.26A8.5 8.5 0 1 1 20.5 11.5Z" stroke="currentColor" stroke-width="1.8"/>
         <path d="M8.2 7.8c.2-.45.4-.46.72-.47h.6c.16 0 .34.03.44.27l.9 2.15c.1.23.05.42-.08.6l-.58.76c-.13.17-.14.32-.04.5.46.88 1.14 1.62 1.98 2.14.18.11.33.09.48-.05l.84-.78c.17-.16.37-.2.58-.11l2.05.98c.23.11.3.28.26.5-.1.64-.47 1.22-1.02 1.57-.47.3-1.1.42-1.67.29-1.34-.3-2.6-.97-3.63-1.9a10.83 10.83 0 0 1-2.35-3.07c-.5-1.02-.53-1.94-.07-2.83Z" fill="currentColor"/>
@@ -161,7 +164,15 @@
       Falar pelo WhatsApp
     </a>
 
-    <a class="botao instagram" href="https://www.instagram.com/dra.juliaraujos/" target="_blank" rel="noopener">
+    <a class="botao secundario" href="https://maps.app.goo.gl/Xkc4s6L8U9xiyzMaA?g_st=ic" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.8"/>
+      </svg>
+      Como chegar
+    </a>
+
+    <a class="botao secundario" href="https://www.instagram.com/dra.juliaraujos/" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/>
         <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
@@ -178,8 +189,8 @@
   <script>
     const numero = "5587981131207";
     const mensagem = "Olá! Vim pelo Instagram e gostaria de saber mais sobre os procedimentos.";
-    const link = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
-    document.getElementById("whatsappLink").href = link;
+    document.getElementById("whatsappLink").href =
+      "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
   </script>
 </body>
 </html>
